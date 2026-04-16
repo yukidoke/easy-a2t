@@ -10,7 +10,7 @@
             if (upElement.files.length) {
                 let form = new FormData();
                 Array.from(upElement.files).forEach((file) => {
-                    form.append("uploadFile", file);
+                    form.append("files", file);
                 });
                 fetch("/uploadvoices", { method: "post", body: form })
                     .then(() => { upElement.value = "" })
