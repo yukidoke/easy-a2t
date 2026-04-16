@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input id="uploadFiles" type="file" multiple />
+    <button onclick="upload()"></button>
+    <script>
+        function upload() {
+            let upElement = document.getElementById("uploadFiles");
+            if (upElement.files.length) {
+                let form = new FormData();
+                Array.from(upElement.files).forEach((file) => {
+                    form.append("uploadFile", file);
+                });
+                fetch("/uploadvoices", { method: "post", body: form })
+                    .then(() => { upElement.value = "" })
+                    .catch((err) => { console.log(err) });
+            }
+        }
+    </script>
+</body>
+
+</html>
