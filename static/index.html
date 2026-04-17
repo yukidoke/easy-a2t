@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <title>easy-a2t</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #f8f9fa;
+            --color-primary: #2563eb;
+            --color-text: #1a1a1a;
+            --radius: 0.5rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1a1a1a;
+                --color-text: #e5e5e5;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+
+        }
+    </style>
+</head>
+
 <body>
     <input id="uploadFiles" type="file" multiple />
-    <button onclick="upload()"></button>
+    <button onclick="upload()">送信</button>
     <script>
         function upload() {
             let upElement = document.getElementById("uploadFiles");
