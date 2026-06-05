@@ -1,7 +1,7 @@
 [project]
 name = "easy-a2t"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Convert audio file to text with Wisper."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
